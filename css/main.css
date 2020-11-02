@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #060ab2;
+}
+
+.button {
+  margin: 50px auto 50px auto;
+  width: 120px;
+  height: 80px;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: chocolate;
+}
+.button:hover {
+  transform: scale(0.95);
+  transition-duration: 0.2s;
+}
+
+.memory-game {
+  width: 650px;
+  height: 650px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(25% - 11px);
+  height: calc(100% / 3 - 11px);
+  margin: 5px;
+  transform: scale(1);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+.memory-card:active {
+  transform: scale(0.95);
+}
+
+.backface, .frontface {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #e8e4e4;
+  position: absolute;
+}
+
+.frontface {
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=main.css.map */
